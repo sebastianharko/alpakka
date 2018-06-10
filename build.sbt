@@ -153,7 +153,7 @@ lazy val orientdb = alpakkaProject("orientdb",
 lazy val reference = alpakkaProject("reference", "reference", Dependencies.Reference, publish / skip := true)
   .disablePlugins(BintrayPlugin)
 
-lazy val postgresqlCdc = alpakkaProject("postgresql-cdc", "postgresqlcdc")
+lazy val postgresqlCdc = alpakkaProject("postgresql-cdc", "postgresqlcdc", Dependencies.PostgreSqlDriver)
 
 lazy val s3 = alpakkaProject("s3", "aws.s3", Dependencies.S3)
 

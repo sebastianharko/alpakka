@@ -236,8 +236,11 @@ object Dependencies {
 
   val Reference = Seq(
     // connector specific library dependencies and resolver settings
-    libraryDependencies ++= Seq(
-      )
+    libraryDependencies ++= Seq()
+  )
+
+  val PostgreSqlDriver = Seq(
+    libraryDependencies ++= Seq("org.postgresql" % "postgresql" % "42.2.1" % Test) // BSD 2-clause "Simplified" License
   )
 
   val S3 = Seq(
