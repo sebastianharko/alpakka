@@ -150,10 +150,14 @@ lazy val orientdb = alpakkaProject("orientdb",
                                    fork in Test := true,
                                    parallelExecution in Test := false)
 
+<<<<<<< 5dbb411162095be09685c13e67674624a50a8957
 lazy val reference = alpakkaProject("reference", "reference", Dependencies.Reference, publish / skip := true)
   .disablePlugins(BintrayPlugin)
 
 lazy val postgresqlCdc = alpakkaProject("postgresql-cdc", "postgresqlcdc", Dependencies.PostgreSqlDriver)
+=======
+lazy val postgresqlcdc = alpakkaProject("postgresql-cdc", "postgresqlcdc", Dependencies.PostgreSqlCdc)
+>>>>>>> migrate regular expressions to fastparse and begin work on ack sink
 
 lazy val s3 = alpakkaProject("s3", "aws.s3", Dependencies.S3)
 
