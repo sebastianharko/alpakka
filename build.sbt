@@ -1,5 +1,6 @@
 lazy val modules: Seq[ProjectReference] = Seq(
   amqp,
+  avroparquet,
   awslambda,
   azureStorageQueue,
   cassandra,
@@ -66,6 +67,9 @@ lazy val alpakka = project
   )
 
 lazy val amqp = alpakkaProject("amqp", "amqp", Dependencies.Amqp)
+
+lazy val avroparquet =
+  alpakkaProject("avroparquet", "avroparquet", Dependencies.AvroParquet, parallelExecution in Test := false)
 
 lazy val awslambda = alpakkaProject("awslambda",
                                     "aws.lambda",
